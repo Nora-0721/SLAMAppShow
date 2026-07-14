@@ -1,18 +1,28 @@
-# 退化场景 SLAM 系统 Android 客户端
-
-> 实验室与香港理工大学余跃教授团队跨校合作研发项目｜2025.09–2026.01
-
-面向地下矿洞、隧道等 GNSS 拒止环境下四足机器人自主救援的定位与建图场景。移动端负责设备连接、采集控制、ROS 数据展示和三维点云交互。
-
-`Java` · `XML` · `Foreground Service` · `Handler` · `Retrofit` · `OkHttp` · `ROS` · `RosJava` · `PointCloud2` · `OpenGL ES` · `GLSurfaceView`
+<div align="center">
+  <h1>退化场景 SLAM 系统 Android 客户端</h1>
+  <p><strong>实验室 × 香港理工大学跨校合作研发｜Android 移动上位机</strong></p>
+  <p>面向 GNSS 拒止环境下四足机器人救援的设备控制、ROS 数据接入与三维点云可视化。</p>
+  <p>
+    <a href="#-项目概览">项目概览</a> ·
+    <a href="#-核心实现">核心实现</a> ·
+    <a href="#-技术栈">技术栈</a> ·
+    <a href="#-项目说明">项目说明</a>
+  </p>
+  <br />
+  <img src="https://img.shields.io/badge/Java-8-007396?style=flat-square&logo=openjdk&logoColor=white" alt="Java" />
+  <img src="https://img.shields.io/badge/Android-Native-3DDC84?style=flat-square&logo=android&logoColor=white" alt="Android" />
+  <img src="https://img.shields.io/badge/ROS-RosJava-22314E?style=flat-square&logo=ros&logoColor=white" alt="ROS" />
+  <img src="https://img.shields.io/badge/Retrofit-OkHttp-4F5B93?style=flat-square" alt="Retrofit and OkHttp" />
+  <img src="https://img.shields.io/badge/OpenGL_ES-3D_Visualization-5586A4?style=flat-square" alt="OpenGL ES" />
+</div>
 
 ---
 
-## 项目概览
+## 🧭 项目概览
 
 系统由 LiDAR、Jetson 边缘计算平台和 Android 移动端组成：Jetson 侧运行 SLAM 与 ROS 节点，Android 端作为移动上位机，负责设备控制、ROS 话题订阅与三维可视化。
 
-## 核心实现
+## ✨ 核心实现
 
 ### 三端数据通信链路
 
@@ -42,7 +52,7 @@ flowchart LR
 
 针对高频、长时点云采集场景中频繁动态分配内存、内存持续上涨和渲染卡顿问题，设计双缓冲内存复用模块；初始化时预分配两块固定容量缓冲区，在帧间交替、逐帧复用，减少频繁 `malloc/free` 带来的内存碎片。连续采集 10 分钟、累计点云数据约 10 GB 时，移动端平均内存占用降低 38%。
 
-## 技术栈
+## 🛠 技术栈
 
 | 领域 | 技术 |
 | --- | --- |
@@ -51,7 +61,7 @@ flowchart LR
 | 机器人通信 | ROS、RosJava、ROS Master、PointCloud2、Topic 发布/订阅 |
 | 三维渲染 | OpenGL ES、GLSurfaceView、FloatBuffer |
 
-## 项目说明
+## 📌 项目说明
 
 - 本仓库用于展示 Android 客户端的项目设计与技术方案，不包含 Jetson 端 SLAM 算法、FAST-LIVO2 配置、传感器驱动、实验数据、设备地址或凭据。
 - LiDAR、Jetson 与 Android 端均位于实验现场局域网；Android 端负责控制指令下发和 ROS 数据订阅，不承载 SLAM 算法计算。
