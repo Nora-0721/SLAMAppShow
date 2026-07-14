@@ -1,7 +1,8 @@
 <div align="center">
   <h1>退化场景 SLAM 系统 Android 客户端</h1>
-  <p><strong>实验室 × 香港理工大学跨校合作研发｜Android 移动上位机</strong></p>
-  <p>面向 GNSS 拒止环境下四足机器人救援的设备控制、ROS 数据接入与三维点云可视化。</p>
+  <p><strong>Bckground&Team：白杨科创中心-具身智能实验室 × PolyU余跃教授团队-校企合作长期研发测距建图项目（中期）</strong></p>
+  <p><strong>个人负责内容：Android 移动端“上位机”</strong></p>
+  <p>面向 GNSS 拒止环境下的雷达设备控制、ROS 数据接入与三维点云可视化。</p>
   <p>
     <a href="#-项目概览">项目概览</a> ·
     <a href="#-核心实现">核心实现</a> ·
