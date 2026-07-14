@@ -2,7 +2,6 @@
   <h1>退化场景 SLAM 系统 Android 客户端</h1>
   <p><strong>实验室 × 香港理工大学跨校合作研发｜Android 移动上位机</strong></p>
   <p>面向 GNSS 拒止环境下四足机器人救援的设备控制、ROS 数据接入与三维点云可视化。</p>
-  <p>🎬 <a href="https://gcnbv9droju6.feishu.cn/wiki/MjMmweZqQipy92kpkSxcCM6nnUh?from=from_copylink">查看项目演示视频</a></p>
   <p>
     <a href="#-项目概览">项目概览</a> ·
     <a href="#-核心实现">核心实现</a> ·
@@ -22,6 +21,10 @@
 ## 🧭 项目概览
 
 系统由 LiDAR、Jetson 边缘计算平台和 Android 移动端组成：Jetson 侧运行 SLAM 与 ROS 节点，Android 端作为移动上位机，负责设备控制、ROS 话题订阅与三维可视化。
+
+## 🎬 项目演示视频
+
+🎬 [查看项目演示视频](https://gcnbv9droju6.feishu.cn/wiki/MjMmweZqQipy92kpkSxcCM6nnUh?from=from_copylink)
 
 ## ✨ 核心实现
 
